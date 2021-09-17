@@ -4,6 +4,8 @@
     Author     : COM
 --%>
 
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +52,7 @@
                                         <form class="user" action="LoginController" method="post">
                                             <div class="form-group">
                                                 <input type="username" class="form-control form-control-user"
-                                                       name="username" placeholder="username" required>
+                                                       name="username" placeholder="username" required value=${c.username}>
                                             </div>
                                             <div class="form-group">
                                                 <input type="password" class="form-control form-control-user"
