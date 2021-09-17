@@ -13,7 +13,7 @@ public class CablecmsController {
     @Autowired
     LoginService loginService;
 
-    @RequestMapping(name="/login",method = RequestMethod.GET)
+    @RequestMapping(name="/",method = RequestMethod.GET)
     public String login(Model model) {
 
         LoginResponse loginResponse=loginService.getLogin();

@@ -12,7 +12,7 @@ public class CablecmsApplication extends SpringBootServletInitializer {
 		return builder.sources(CablecmsApplication.class);
 	}
 	public static void main(String[] args) {
-		SpringApplication.run(CablecmsApplication.class, args);
+		SpringApplication.run(CablecmsApplication.class);
 	}
 
 }
