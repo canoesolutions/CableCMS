@@ -17,7 +17,7 @@ public class HomeController {
     public String login(Model model) {
 
         LoginResponse loginResponse=loginService.getLogin();
-        model.addAttribute("Login",loginResponse);
-        return "login.jsp";
+        model.addAttribute("login",loginResponse);
+        return "login";
     }
 }
