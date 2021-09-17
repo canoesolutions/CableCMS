@@ -17,6 +17,6 @@ public class CablecmsController {
 
         LoginResponse loginResponse=loginService.getLogin();
         model.addAttribute("login",loginResponse);
-        return "index";
+        return "login";
     }
 }
