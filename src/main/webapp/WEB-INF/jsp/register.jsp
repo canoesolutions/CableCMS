@@ -42,7 +42,7 @@
                                     <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                                 </div>
                                 
-                                <form class="user" action="AddAdminController" method="post">
+                                <form class="user" action="/addadmin" method="post">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <input type="text" class="form-control form-control-user" name="companyname"
@@ -81,10 +81,10 @@
                                 
                                 <br>
                                 <div class="text-center">
-                                    <a class="small" href="forgotpassword.jsp">Forgot Password?</a>
+                                    <a class="small" href="/forgotpassword">Forgot Password?</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="login.jsp">Already have an account? Login!</a>
+                                    <a class="small" href="/">Already have an account? Login!</a>
                                 </div>
                             </div>
                         </div>

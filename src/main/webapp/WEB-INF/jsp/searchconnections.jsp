@@ -1,5 +1,5 @@
-<%@page import="com.cablecms.SearchConnection"%>
-<%@page import="java.sql.*"%>
+<!--<%@page import="com.cablecms.SearchConnection"%>
+<%@page import="java.sql.*"%>-->
 <head>
     <title>CMS - Active Connection</title>
     <jsp:include page="menubar.jsp"></jsp:include> 

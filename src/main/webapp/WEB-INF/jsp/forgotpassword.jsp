@@ -65,10 +65,10 @@
                                         
                                         <br>
                                         <div class="text-center">
-                                            <a class="small" href="register.jsp">Create an Account!</a>
+                                            <a class="small" href="/register">Create an Account!</a>
                                         </div>
                                         <div class="text-center">
-                                            <a class="small" href="login.jsp">Already have an account? Login!</a>
+                                            <a class="small" href="/">Already have an account? Login!</a>
                                         </div>
                                     </div>
                                 </div>

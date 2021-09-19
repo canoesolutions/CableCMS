@@ -49,7 +49,7 @@
                                             <p>Please enter username and password to login</p>
                                         </div>
 
-                                        <form class="user" action="LoginController" method="post">
+                                        <form class="user" action="/login">
                                             <div class="form-group">
                                                 <input type="username" class="form-control form-control-user"
                                                        name="username" placeholder="username" required value=${c.username}>
@@ -65,13 +65,13 @@
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-user btn-block">
-                                                Login
-                                            </button>
+                                                Login</button>
+
                                             <div class="text-center">
                                                 <br>
-                                                <a href="forgotpassword.jsp">Forgot Password</a>
+                                                <a href="/forgotpassword">Forgot Password</a>
                                                 <br>
-                                                <a href="register.jsp">Not have an account? Register</a></div>
+                                                <a href="/register">Not have an account? Register</a></div>
                                         </form>
                                     </div>
                                 </div>
