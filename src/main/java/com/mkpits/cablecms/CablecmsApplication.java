@@ -1,9 +1,12 @@
 package com.mkpits.cablecms;
 
+import org.hibernate.SessionFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+import javax.security.auth.login.Configuration;
 
 @SpringBootApplication(scanBasePackages = "com.mkpits.cablecms")
 public class CablecmsApplication extends SpringBootServletInitializer {
@@ -14,5 +17,4 @@ public class CablecmsApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(CablecmsApplication.class);
 	}
-
 }
