@@ -12,6 +12,7 @@ public class AdminService {
 
     public Admin createAdmin(Admin admin){
         adminRepo.save(admin);
+        //adminRepo.findOne();
         return null;
     }
 }

@@ -2,7 +2,6 @@ package com.mkpits.cablecms.service;
 
 import com.mkpits.cablecms.dao.AdminSearch;
 import com.mkpits.cablecms.dto.AdminDto;
-import com.mkpits.cablecms.response.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
