@@ -1,6 +1,8 @@
 package com.mkpits.cablecms.controller;
 
+import com.mkpits.cablecms.model.Admin;
 import com.mkpits.cablecms.response.LoginResponse;
+import com.mkpits.cablecms.service.AdminService;
 import com.mkpits.cablecms.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,7 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class CablecmsController {
-    //@Autowired
+    @Autowired
+    AdminService adminService;
     //LoginService loginService;
 
     @GetMapping("/")
@@ -27,6 +30,14 @@ public class CablecmsController {
 
     @GetMapping("/forgotpassword")
     public String forgotpasswordController(){
+        Admin admin= Admin.builder()
+                .companyName("Test")
+                .userName("shantanu")
+                .emailAddress("asd@gmail.com")
+                .password("admin")
+                .contactNumber("1234567890")
+                .build();
+        adminService.createAdmin(admin);
         return "forgotpassword";
     }
 
