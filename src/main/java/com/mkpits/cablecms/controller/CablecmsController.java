@@ -11,15 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class CablecmsController {
-    @Autowired
-    AdminService adminService;
-    //LoginService loginService;
 
     @GetMapping("/")
     public String homecontroller() {
-
-        //LoginResponse loginResponse=loginService.getLogin();
-        //model.addAttribute("cablecmsController",loginResponse);
         return "login";
     }
 

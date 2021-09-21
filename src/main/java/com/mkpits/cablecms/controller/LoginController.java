@@ -19,3 +19,4 @@ public class LoginController {
         return "dashboard";
     }
 }
+
