@@ -1,14 +1,18 @@
 package com.mkpits.cablecms.service;
 
+import com.mkpits.cablecms.dao.AdminSearch;
+import com.mkpits.cablecms.dto.AdminDto;
 import com.mkpits.cablecms.response.LoginResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LoginService {
+    @Autowired
+    AdminSearch adminSearch;
 
-
-    public LoginResponse getLogin(){
-        LoginResponse loginResponse= LoginResponse.builder().username("admin").password("admin").build();
-        return loginResponse;
+    public AdminDto searchAdmin(AdminDto adminDto){
+        adminSearch.findByUsername(adminDto.getUsername());
+        return null;
     }
 }
