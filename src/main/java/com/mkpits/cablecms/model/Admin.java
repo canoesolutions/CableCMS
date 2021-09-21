@@ -32,6 +32,4 @@ public class Admin implements Serializable {
 
     @Column(name = "password")
     private String password;
-
-
 }

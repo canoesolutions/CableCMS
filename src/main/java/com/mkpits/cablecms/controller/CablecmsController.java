@@ -30,20 +30,7 @@ public class CablecmsController {
 
     @GetMapping("/forgotpassword")
     public String forgotpasswordController(){
-        Admin admin= Admin.builder()
-                .companyName("Test")
-                .userName("shantanu")
-                .emailAddress("asd@gmail.com")
-                .password("admin")
-                .contactNumber("1234567890")
-                .build();
-        adminService.createAdmin(admin);
         return "forgotpassword";
-    }
-
-    @GetMapping("/login")
-    public String loginController() {
-        return "dashboard";
     }
 
     @GetMapping("/searchcustomer")

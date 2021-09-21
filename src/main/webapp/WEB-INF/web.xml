@@ -9,38 +9,6 @@
         </session-timeout>
     </session-config>
 
-    <!--Servelet Decleration-->
-    <servlet>  
-        <servlet-name>AddAdminController</servlet-name>      
-    </servlet>  
 
-    <servlet>  
-        <servlet-name>AddAdminDao</servlet-name>
-    </servlet>
-    
-    <servlet>  
-        <servlet-name>LoginController</servlet-name>      
-    </servlet> 
-
-    <!--Servelet Mapping-->
-    <servlet-mapping>  
-        <servlet-name>AddAdminController</servlet-name>  
-        <url-pattern>/AddAdminController</url-pattern>  
-    </servlet-mapping>  
-    
-    <servlet-mapping>  
-        <servlet-name>AddAdminDao</servlet-name>  
-        <url-pattern>/AddAdminDao</url-pattern>  
-    </servlet-mapping>  
-    
-    <servlet-mapping>  
-        <servlet-name>LoginController</servlet-name>  
-        <url-pattern>/LoginController</url-pattern>  
-    </servlet-mapping>  
- 
-    <welcome-file-list>  
-        <welcome-file>register.jsp</welcome-file>
-        <welcome-file>login.jsp</welcome-file> 
-    </welcome-file-list>  
 
 </web-app>
