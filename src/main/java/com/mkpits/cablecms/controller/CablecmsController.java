@@ -1,12 +1,6 @@
 package com.mkpits.cablecms.controller;
 
-import com.mkpits.cablecms.model.Admin;
-import com.mkpits.cablecms.response.LoginResponse;
-import com.mkpits.cablecms.service.AdminService;
-import com.mkpits.cablecms.service.LoginService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller

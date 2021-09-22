@@ -1,6 +1,9 @@
+/*
+
 package com.mkpits.cablecms.service;
 
-import com.mkpits.cablecms.dao.AdminSearch;
+import com.mkpits.cablecms.dao.AdminRepo;
+//import com.mkpits.cablecms.dao.AdminSearch;
 import com.mkpits.cablecms.dto.AdminDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,10 +11,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoginService {
     @Autowired
-    AdminSearch adminSearch;
+    AdminRepo adminRepo;
 
     public AdminDto searchAdmin(AdminDto adminDto){
-        adminSearch.findByUsername(adminDto.getUsername());
+        adminRepo.findOne(adminDto);
         return null;
     }
 }
+*/

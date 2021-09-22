@@ -1,3 +1,4 @@
+/*
 package com.mkpits.cablecms.validator;
 
 
@@ -8,3 +9,4 @@ public class LoginValidation {
         return false;
     }
 }
+*/
