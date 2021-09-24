@@ -1,4 +1,4 @@
-package com.mkpits.cablecms.model;
+/*package com.mkpits.cablecms.model;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -22,3 +22,4 @@ public class Area {
     private String areaName;
 
 }
+*/

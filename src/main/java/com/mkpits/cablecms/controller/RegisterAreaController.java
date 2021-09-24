@@ -1,4 +1,4 @@
-package com.mkpits.cablecms.controller;
+/*package com.mkpits.cablecms.controller;
 
 import com.mkpits.cablecms.model.Area;
 import com.mkpits.cablecms.service.RegisterAreaService;
@@ -25,3 +25,4 @@ public class RegisterAreaController {
         return "addarea";
     }
 }
+*/
