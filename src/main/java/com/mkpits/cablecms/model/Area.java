@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Builder
 @Entity
 @Table(name = "area")
-public class Addarea {
+public class Area {
     @Id
     @Column(name = "areaid")
     @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "false")

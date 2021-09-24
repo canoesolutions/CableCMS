@@ -1,6 +1,6 @@
 package com.mkpits.cablecms.controller;
 
-import com.mkpits.cablecms.model.Addarea;
+import com.mkpits.cablecms.model.Area;
 import com.mkpits.cablecms.service.RegisterAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,12 +16,12 @@ public class RegisterAreaController {
     @RequestMapping(value="/registerarea", method = RequestMethod.GET)
     public String resgisterAreaController(@RequestParam("areaname") String areaname){
 
-        Addarea addarea= Addarea.builder()
+        Area area = Area.builder()
 
                 .areaName(areaname)
 
                 .build();
-        registerAreaService.createArea(addarea);
+        registerAreaService.createArea(area);
         return "addarea";
     }
 }
