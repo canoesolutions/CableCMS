@@ -14,7 +14,7 @@ public class LoginService {
     AdminRepo adminRepo;
 
     public AdminDto searchAdmin(AdminDto adminDto){
-        adminRepo.findByUsername(adminDto.getUsername());
+       // adminRepo.findByUsername(adminDto.getUsername());
         return null;
     }
 }

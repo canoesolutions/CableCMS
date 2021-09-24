@@ -13,7 +13,7 @@ public class RegisterAreaController {
     @Autowired
     RegisterAreaService registerAreaService;
 
-    @RequestMapping(value="/registerarea", method = RequestMethod.GET)
+    @RequestMapping(value="/registerarea", method = RequestMethod.POST)
     public String resgisterAreaController(@RequestParam("areaname") String areaname){
 
         Area area = Area.builder()

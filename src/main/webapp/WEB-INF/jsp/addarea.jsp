@@ -15,7 +15,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">By Area Name :</label>
                             <div class="col-sm-3">
-                                <input class="form-control" id="stbnumber" placeholder="Enter Area Name">
+                                <input class="form-control" id="stbnumber" placeholder="Enter Area Name" name="areaname">
                             </div>
                             <div class="col-sm-2">
                             <button type="submit" class="btn btn-primary">Add Area</button>
