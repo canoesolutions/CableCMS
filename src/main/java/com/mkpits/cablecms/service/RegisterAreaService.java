@@ -1,4 +1,4 @@
-package com.mkpits.cablecms.service;
+/*package com.mkpits.cablecms.service;
 
 import com.mkpits.cablecms.dao.AddAreaRepo;
 import com.mkpits.cablecms.model.Area;
@@ -17,3 +17,4 @@ public class RegisterAreaService {
     }
 
 }
+*/
