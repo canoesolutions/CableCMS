@@ -21,11 +21,6 @@ public class CablecmsController {
         return "forgotpassword";
     }
 
-    @GetMapping("/searchcustomer")
-    public String searchcustomerController() {
-        return "searchcustomer";
-    }
-
     @GetMapping("/searchconnections")
     public String searchconnectionsController() {
         return "searchconnections";
@@ -47,7 +42,7 @@ public class CablecmsController {
     }
 
     @GetMapping("/addcustomer")
-    public String caddcustomerController() {
+    public String addcustomerController() {
         return "addcustomer";
     }
 
