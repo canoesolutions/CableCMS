@@ -1,5 +1,6 @@
 package com.mkpits.cablecms.model;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,6 +9,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
+@Builder
 @Entity
 @Table(name = "customer")
 public class Customer implements Serializable {
@@ -33,4 +35,16 @@ public class Customer implements Serializable {
 
     @Column(name="status")
     private String status;
+
+    @Column(name = "phoneno")
+    private String phoneNo;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "setupboxno")
+    private String setupboxno;
 }
