@@ -1,4 +1,4 @@
-/*
+
 
 package com.mkpits.cablecms.service;
 
@@ -14,8 +14,8 @@ public class LoginService {
     AdminRepo adminRepo;
 
     public AdminDto searchAdmin(AdminDto adminDto){
-        adminRepo.findOne(adminDto);
+        adminRepo.findByUsername(adminDto.getUsername());
         return null;
     }
 }
-*/
+
