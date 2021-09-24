@@ -1,7 +1,7 @@
 package com.mkpits.cablecms.controller;
 
-import com.mkpits.cablecms.model.Addcustomer;
-import com.mkpits.cablecms.service.AddCustomerService;
+import com.mkpits.cablecms.model.Customer;
+import com.mkpits.cablecms.service.RegisterCustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class RegisterCustomerController {
     @Autowired
-    AddCustomerService addCustomerService;
+    RegisterCustomerService registerCustomerService;
 
-    @RequestMapping(value="/registercustomer", method = RequestMethod.GET)
+    @RequestMapping(value="/registercustomer", method = RequestMethod.POST)
     public String resgisterCustomerController(@RequestParam("firstname") String firstname,
                                           @RequestParam("lastname") String lastname,
                                           @RequestParam("phoneno") String phoneno,
@@ -23,8 +23,7 @@ public class RegisterCustomerController {
                                           @RequestParam("balance") String balance,
                                           @RequestParam("setupboxno") String setupboxno,
                                           @RequestParam("status") String status){
-        Addcustomer addcustomer= Addcustomer.builder()
-
+        Customer customer= Customer.builder()
                 .firstName(firstname)
                 .lastName(lastname)
                 .phoneNo(phoneno)
@@ -35,7 +34,7 @@ public class RegisterCustomerController {
                 .setupboxno(setupboxno)
                 .status(status)
                 .build();
-        addCustomerService.createCustomer(addcustomer);
+        registerCustomerService.createCustomer(customer);
         return "addcustomer";
     }
 

@@ -34,7 +34,7 @@
                                                 <h1 class="h4 text-gray-900 mb-4"><strong>Add Your New Customer</strong></h1>
                                             </div>
                                             <div class="card-body card shadow mb-8" >
-                                                <form class="user" action="/registercustomer">
+                                                <form class="user" action="/registercustomer" method="post">
                                                    
                                                     <div class="form-group">
                                                         <input type="text" class="form-control form-control-user" name="firstname"

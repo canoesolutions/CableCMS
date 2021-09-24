@@ -13,7 +13,7 @@ public class RegisterAdminController {
     @Autowired
     AdminService adminService;
 
-    @RequestMapping(value="/registeradmin", method = RequestMethod.GET)
+    @RequestMapping(value="/registeradmin", method = RequestMethod.POST)
     public String registerAdminController(@RequestParam("username") String username,
                                           @RequestParam("companyname") String companyname,
                                           @RequestParam("email") String email,
