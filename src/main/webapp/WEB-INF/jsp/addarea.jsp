@@ -10,7 +10,7 @@
                 <p class="mb-4">Manage your customer area information here</p>
                 <hr><br>
                 <div class="card-body card shadow mb-4">
-                    <form>
+                    <form class="user" action="/registerarea" method="post">
                         <!-- Row 1 -->
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">By Area Name :</label>
