@@ -1,3 +1,4 @@
+/*
 package com.mkpits.cablecms.controller;
 
 import com.mkpits.cablecms.model.Customer;
@@ -39,3 +40,5 @@ public class RegisterCustomerController {
     }
 
 }
+
+*/

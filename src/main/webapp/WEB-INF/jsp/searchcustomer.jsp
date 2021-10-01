@@ -12,27 +12,12 @@
     <p class="mb-4">Manage your customer accounts here</p>
     <hr>
     <div class="card-body card shadow mb-4">
-        <form>
+        <form class="user">
             <!-- Row 1 -->
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">By First Name :</label>
+                <label class="col-sm-2 col-form-label">By Name :</label>
                 <div class="col-sm-3">
-                    <input class="form-control" name="name" placeholder="Enter name">
-                </div>
-            </div>
-            <!-- Row 2 -->
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">By Status :</label>
-                <div class="col-sm-3">
-                    <select class="form-control "form-control-user name="status">
-                        <option value="">---</option>
-                        <option value="Active">Active</option>
-                        <option value="Inactive">Inactive</option>
-                    </select>
-                </div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2">
-                    <button type="submit" class="btn btn-primary" >Submit</button>
+                    <input class="form-control" name="name" id="nameInput" onkeyup="searchByName()" placeholder="Search by Name..">
                 </div>
             </div>
         </form>
@@ -58,8 +43,9 @@
                             <th>Delete</th>
                         </tr>
                     </thead>
-                    <c:forEach var="customer" items="${customers }">
+
                     <tbody>
+                    <c:forEach var="customer" items="${customers}">
                         <tr>
                             <td>${customer.firstName } ${customer.lastName }</td>
                             <td>${customer.area }</td>
@@ -77,6 +63,27 @@
                         </c:forEach>
                     </tbody>
                 </table>
+
+                <script>
+                function searchByName() {
+                  var input, filter, table, tr, td, i, txtValue;
+                  input = document.getElementById("nameInput");
+                  filter = input.value.toUpperCase();
+                  table = document.getElementById("dataTable");
+                  tr = table.getElementsByTagName("tr");
+                  for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                      txtValue = td.textContent || td.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                      } else {
+                        tr[i].style.display = "none";
+                      }
+                    }
+                  }
+                }
+                </script>
             </div>
         </div>
     </div>

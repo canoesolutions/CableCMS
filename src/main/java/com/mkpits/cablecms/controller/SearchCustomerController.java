@@ -8,13 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping("/searchcustomer")
 public class SearchCustomerController {
+
     @Autowired
     CustomerService customerService;
 
-    @RequestMapping(value = "/searchcustomer", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String searchCustomerController(ModelMap modelMap){
         modelMap.put("customers", customerService.findAll());
         return "searchcustomer";
     }
 }
+
