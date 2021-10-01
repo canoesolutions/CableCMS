@@ -22,6 +22,9 @@ public class Customer implements Serializable {
     @Column(name="lastname")
     private String lastName;
 
+    @Column(name = "setupboxno")
+    private String setupBoxNo;
+
     @Column(name="area")
     private String area;
 
@@ -41,8 +44,7 @@ public class Customer implements Serializable {
     private String email;
 
     @Column(name = "address")
-    private String address;
+    private String address;*/
 
-    @Column(name = "setupboxno")
-    private String setupboxno;*/
+
 }
