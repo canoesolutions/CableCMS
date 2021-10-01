@@ -17,9 +17,7 @@ public class RegisterAreaController {
     public String resgisterAreaController(@RequestParam("areaname") String areaname){
 
         Area area = Area.builder()
-
                 .areaName(areaname)
-
                 .build();
         registerAreaService.createArea(area);
         return "addarea";

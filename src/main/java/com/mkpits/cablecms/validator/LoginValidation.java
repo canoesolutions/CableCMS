@@ -1,12 +1,23 @@
-/*
 package com.mkpits.cablecms.validator;
 
 
+import com.mkpits.cablecms.dto.AdminDto;
+import com.mkpits.cablecms.model.Admin;
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class LoginValidation {
+    @Autowired
+    Admin admin;
 
-    public boolean loginValidation(String username, String password){
+    @Autowired
+    AdminDto adminDto;
 
-        return false;
+    public String loginValidation(){
+        if(admin.getUserName().equals(adminDto.getUsername())&&admin.getPassword().equals(adminDto.getPassword())){
+            return "dashboard";
+        } else {
+            return "/";
+        }
     }
 }
-*/
+

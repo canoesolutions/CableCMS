@@ -1,9 +1,9 @@
 /*
-
 package com.mkpits.cablecms.controller;
 
 import com.mkpits.cablecms.dto.AdminDto;
-import com.mkpits.cablecms.service.AdminService;
+import com.mkpits.cablecms.model.Admin;
+import com.mkpits.cablecms.validator.LoginValidation;
 import com.mkpits.cablecms.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +16,9 @@ public class LoginController {
     @Autowired
     LoginService loginService;
 
+    @Autowired
+    LoginValidation loginValidation;
+
     @RequestMapping(value="/login", method = RequestMethod.GET)
     public String loginController(@RequestParam("username") String username, @RequestParam("password") String password) {
         AdminDto adminDto=AdminDto.builder()
@@ -23,9 +26,12 @@ public class LoginController {
                 .password(password)
                 .build();
         loginService.searchAdmin(adminDto);
+        //String result=loginValidation.loginValidation();
+        //return result;
         return "dashboard";
     }
 }
 */
+
 
 
