@@ -1,7 +1,4 @@
-/*
-
-
-package com.mkpits.cablecms.service;
+/*package com.mkpits.cablecms.service;
 
 import com.mkpits.cablecms.dao.AdminRepo;
 import com.mkpits.cablecms.dto.AdminDto;
@@ -14,11 +11,16 @@ public class LoginService {
     @Autowired
     AdminRepo adminRepo;
 
-    public AdminDto searchAdmin(AdminDto adminDto){
-        Admin admin=adminRepo.findByUsername(adminDto.getUsername());
+    public  String searchAdmin(AdminDto adminDto){
+        Admin admin=adminRepo.findByUsername(adminDto.getUsername(), adminDto.getPassword());
 
-        return null;
+        if (admin==null){
+            return "/";
+        }
+        else {
+            return "dashboard";
+        }
     }
-}
-*/
+}*/
+
 
