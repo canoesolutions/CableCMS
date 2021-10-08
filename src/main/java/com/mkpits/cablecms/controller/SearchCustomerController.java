@@ -1,6 +1,7 @@
 package com.mkpits.cablecms.controller;
 
 import com.mkpits.cablecms.service.CustomerService;
+import com.mkpits.cablecms.service.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -12,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SearchCustomerController {
 
     @Autowired
-    CustomerService customerService;
+    CustomerServiceImpl customerServiceImpl;
 
     @RequestMapping(method = RequestMethod.GET)
     public String searchCustomerController(ModelMap modelMap){
-        modelMap.put("customers", customerService.findAll());
+        modelMap.put("customers", customerServiceImpl.findAll());
         return "searchcustomer";
     }
 }
