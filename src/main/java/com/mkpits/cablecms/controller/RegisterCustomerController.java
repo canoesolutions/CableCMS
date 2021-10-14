@@ -1,4 +1,4 @@
-/*
+
 package com.mkpits.cablecms.controller;
 
 import com.mkpits.cablecms.model.Customer;
@@ -19,6 +19,7 @@ public class RegisterCustomerController {
                                           @RequestParam("lastname") String lastname,
                                           @RequestParam("phoneno") String phoneno,
                                           @RequestParam("address") String address,
+                                              @RequestParam("email") String email,
                                           @RequestParam("packageamount") String packageamount,
                                           @RequestParam("area") String area,
                                           @RequestParam("balance") String balance,
@@ -29,10 +30,11 @@ public class RegisterCustomerController {
                 .lastName(lastname)
                 .phoneNo(phoneno)
                 .address(address)
+                .email(email)
                 .packageAmount(packageamount)
                 .area(area)
                 .balance(balance)
-                .setupboxno(setupboxno)
+                .setUpBoxNo(setupboxno)
                 .status(status)
                 .build();
         registerCustomerService.createCustomer(customer);
@@ -41,4 +43,4 @@ public class RegisterCustomerController {
 
 }
 
-*/
+

@@ -1,4 +1,4 @@
-/*
+
 package com.mkpits.cablecms.service;
 import com.mkpits.cablecms.dao.CustomerRepo;
 import com.mkpits.cablecms.model.Customer;
@@ -17,4 +17,4 @@ public class RegisterCustomerService {
     }
 
 }
-*/
+
