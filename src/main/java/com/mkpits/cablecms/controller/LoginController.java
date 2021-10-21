@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpSession;
-
 @Controller
 public class LoginController {
     @Autowired
@@ -31,6 +28,7 @@ public class LoginController {
             return "/";
         }
         else {
+
             return "searchcustomer";
         }
     }

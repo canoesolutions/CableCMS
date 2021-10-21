@@ -38,6 +38,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Name</th>
                             <th>Setup-Box No</th>
                             <th>Area</th>
@@ -49,8 +50,9 @@
                     </thead>
 
                     <tbody>
-                    <c:forEach var="customer" items="${customers}">
+                        <c:forEach var="customer" items="${customers}">
                         <tr>
+                            <td>${customer.customerId }</td>
                             <td>${customer.firstName } ${customer.lastName }</td>
                             <td>${customer.setupBoxNo }</td>
                             <td>${customer.area }</td>
@@ -77,7 +79,7 @@
                     table = document.getElementById("dataTable");
                     tr = table.getElementsByTagName("tr");
                     for (i = 0; i < tr.length; i++) {
-                        td = tr[i].getElementsByTagName("td")[0];
+                        td = tr[i].getElementsByTagName("td")[1];
                         if (td) {
                                 txtValue = td.textContent || td.innerText;
                             if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -96,7 +98,7 @@
                     table = document.getElementById("dataTable");
                     tr = table.getElementsByTagName("tr");
                     for (i = 0; i < tr.length; i++) {
-                        td = tr[i].getElementsByTagName("td")[1];
+                        td = tr[i].getElementsByTagName("td")[2];
                         if (td) {
                             txtValue = td.textContent || td.innerText;
                             if (txtValue.toUpperCase().indexOf(filter) > -1) {
