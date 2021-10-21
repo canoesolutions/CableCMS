@@ -1,8 +1,8 @@
 package com.mkpits.cablecms.service;
 
-import com.mkpits.cablecms.model.Customer;
+import com.mkpits.cablecms.model.SearchCustomer;
 
 public interface CustomerService {
 
-    public Iterable<Customer> findAll();
+    public Iterable<SearchCustomer> findAll();
 }

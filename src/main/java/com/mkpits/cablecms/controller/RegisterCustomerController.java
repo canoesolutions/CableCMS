@@ -1,7 +1,8 @@
+/*
 
 package com.mkpits.cablecms.controller;
 
-import com.mkpits.cablecms.model.Customer;
+import com.mkpits.cablecms.model.SearchCustomer;
 import com.mkpits.cablecms.service.RegisterCustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +26,7 @@ public class RegisterCustomerController {
                                           @RequestParam("balance") String balance,
                                           @RequestParam("setupboxno") String setupboxno,
                                           @RequestParam("status") String status){
-        Customer customer= Customer.builder()
+        SearchCustomer customer= SearchCustomer.builder()
                 .firstName(firstname)
                 .lastName(lastname)
                 .phoneNo(phoneno)
@@ -44,3 +45,4 @@ public class RegisterCustomerController {
 }
 
 
+*/

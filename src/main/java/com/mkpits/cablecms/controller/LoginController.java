@@ -24,14 +24,6 @@ public class LoginController {
                 .username(username)
                 .password(password)
                 .build();
-        /*String str=loginService.searchAdmin(adminDto);
-
-        //To forward page based on admin authentication
-        if (str.equals("User Not Found, Please register!!")) {
-            return "/register";
-        } else {
-            return "/dashboard";
-        }*/
 
         Admin existing=loginService.findByUserName(adminDto.getUsername(), adminDto.getPassword());
 
