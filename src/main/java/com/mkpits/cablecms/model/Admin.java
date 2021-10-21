@@ -1,8 +1,6 @@
 package com.mkpits.cablecms.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,6 +8,8 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "admin")
 public class Admin implements Serializable {

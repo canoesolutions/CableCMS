@@ -33,13 +33,13 @@ public class LoginController {
             return "/dashboard";
         }*/
 
-        Admin existing=loginService.findByUserName(adminDto.getUsername());
+        Admin existing=loginService.findByUserName(adminDto.getUsername(), adminDto.getPassword());
 
         if (existing==null){
             return "/";
         }
         else {
-            return "dashboard";
+            return "searchcustomer";
         }
     }
 }

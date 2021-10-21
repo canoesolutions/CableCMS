@@ -11,9 +11,9 @@ import java.util.Optional;
 
 public interface AdminRepo extends JpaRepository<Admin,Integer> {
 
-  /* @Query("SELECT a FROM admin a WHERE a.username = :username and a.password = :password")
-   public Admin findByUsername(@Param("username") String username, @Param("password") String password);*/
+    @Query("FROM Admin a WHERE a.userName = :username and a.password = :password")
+    Optional<Admin> findByUsername(String username, String password);
 
-    Admin findByUserName(String username);
+    //Admin findByUserName(String username);
 }
 

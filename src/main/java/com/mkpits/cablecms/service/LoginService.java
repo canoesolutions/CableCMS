@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LoginService {
@@ -45,8 +46,9 @@ public class LoginService {
         return res1;
     }*/
 
-    public Admin findByUserName(String username){
-        return adminRepo.findByUserName(username);
+    public Admin findByUserName(String username,String password){
+        Optional<Admin> admin=adminRepo.findByUsername(username,password);
+        return admin.orElse(null);
     }
 }
 
