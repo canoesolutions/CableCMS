@@ -38,7 +38,7 @@
                                 <%=today%> balance</div>
                                 <d:forEach var="dashboard" items="${dashboard}">
                                 <br>
-                                <div class="h3 mb-0 font-weight-bold text-gray-800">&#8377;40,000${dashboard.thisMonthBalance }</div>
+                                <div class="h3 mb-0 font-weight-bold text-gray-800">&#8377;${dashboard.thisMonthBalance }</div>
                                 <br>
                         </div>
                            
@@ -62,7 +62,7 @@
                             <div class="text-s font-weight-bold text-warning text-uppercase mb-1">
                                 Previous month balance</div>
                             <br>
-                                <div class="h3 mb-0 font-weight-bold text-gray-800">&#8377;215,000${dashboard.previousMonthBalance }</div>
+                                <div class="h3 mb-0 font-weight-bold text-gray-800">&#8377;${dashboard.previousMonthBalance }</div>
                                 <br>
                         </div>
                         <div class="col-auto">
@@ -87,7 +87,7 @@
                             <br>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h3 mb-0 mr-3 font-weight-bold text-gray-800">&#8377;500${dashboard.amountCollected }</div>
+                                        <div class="h3 mb-0 mr-3 font-weight-bold text-gray-800">&#8377;${dashboard.amountCollected }</div>
                                     </div>
                                     <br>
                                 </div>
@@ -118,7 +118,7 @@
                                     <div class="text-s font-weight-bold text-danger text-uppercase mb-1">
                                         Total Balance (this + previous month)</div>
                                     <br>
-                                        <div class="h3 mb-0 font-weight-bold text-gray-800">&#8377;255000${dashboard.totalBalance }</div>
+                                        <div class="h3 mb-0 font-weight-bold text-gray-800">&#8377;${dashboard.totalBalance }</div>
                                 </div>
                                 <div class="col-auto">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-exclamation-square-fill text-danger" viewBox="0 0 16 16">
@@ -139,7 +139,7 @@
                                     <div class="text-s font-weight-bold text-success text-uppercase mb-1">
                                         Active Connections</div>
                                     <br>
-                                        <div class="h3 mb-0 font-weight-bold text-gray-800">400${dashboard.activeConnections }</div>
+                                        <div class="h3 mb-0 font-weight-bold text-gray-800">${dashboard.activeConnections }</div>
                                 </div>
                                 <div class="col-auto">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="text-success bi bi-person-check-fill" viewBox="0 0 16 16">
@@ -161,14 +161,14 @@
                                     <div class="text-s font-weight-bold text-danger text-uppercase mb-1">
                                         Inactive Connections</div>
                                     <br>
-                                        <div class="h3 mb-0 font-weight-bold text-gray-800">21${dashboard.inactiveConnections }</div>
+                                        <div class="h3 mb-0 font-weight-bold text-gray-800">${dashboard.inactiveConnections }</div>
                                 </div>
                                 <div class="col-auto">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="text-danger bi bi-person-x-fill" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6.146-2.854a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
                                     </svg>
                                 </div>
-                            </c:forEach>
+                            </d:forEach>
                             </div>
                         </div>
                     </div>
