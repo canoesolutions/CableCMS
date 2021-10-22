@@ -1,7 +1,6 @@
-/*
-
 package com.mkpits.cablecms.controller;
 
+import com.mkpits.cablecms.model.Customer;
 import com.mkpits.cablecms.model.SearchCustomer;
 import com.mkpits.cablecms.service.RegisterCustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,7 @@ public class RegisterCustomerController {
                                           @RequestParam("balance") String balance,
                                           @RequestParam("setupboxno") String setupboxno,
                                           @RequestParam("status") String status){
-        SearchCustomer customer= SearchCustomer.builder()
+        Customer customer= Customer.builder()
                 .firstName(firstname)
                 .lastName(lastname)
                 .phoneNo(phoneno)
@@ -35,7 +34,7 @@ public class RegisterCustomerController {
                 .packageAmount(packageamount)
                 .area(area)
                 .balance(balance)
-                .setUpBoxNo(setupboxno)
+                .setupBoxNo(setupboxno)
                 .status(status)
                 .build();
         registerCustomerService.createCustomer(customer);
@@ -43,6 +42,3 @@ public class RegisterCustomerController {
     }
 
 }
-
-
-*/
