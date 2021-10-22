@@ -10,13 +10,13 @@ public class EditCustomerController {
 
     @RequestMapping(value="/editcustomer/{id}")
     public String editCustomerController(@PathVariable int id, ModelMap model){
-        try {
+        /*try {
             Employee employee = employeeService.getEmployeeById(id);
             model.addAttribute("employee", employee);
             return "editEmployee";
         } catch (Exception ex) {
             return "index";
-        }
+        }*/
         return "editcustomer";
     }
 
