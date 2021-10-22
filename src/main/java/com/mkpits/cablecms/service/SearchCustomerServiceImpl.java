@@ -8,7 +8,7 @@ import javax.transaction.Transactional;
 
 @Transactional
 @Service("customerService")
-public class CustomerServiceImpl implements CustomerService{
+public class SearchCustomerServiceImpl implements SearchCustomerService {
 
     @Autowired
     SearchCustomerRepo customerRepo;

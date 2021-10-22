@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <head>
     <title>CMS - Edit Customer</title>
     <jsp:include page="menubar.jsp"></jsp:include>
@@ -34,33 +36,33 @@
                                                 <h1 class="h4 text-gray-900 mb-4"><strong>Edit Customer</strong></h1>
                                             </div>
                                             <div class="card-body card shadow mb-8" >
+                                            <c:forEach var="customer" items="${customer}">
                                                 <form class="user" action="/registercustomer" method="post">
 
                                                     <div class="form-group">
                                                         <input type="text" class="form-control form-control-user" name="firstname"
-                                                               placeholder="First Name" >
+                                                               placeholder="${customer.firstName }" >${customer.firstName }
                                                     </div>
                                                     <div class="form-group">
                                                         <input type="text" class="form-control form-control-user" name="lastname"
-                                                               placeholder="Last Name" >
+                                                               placeholder="${customer.lastName }" >
                                                     </div>
                                                     <div class="form-group">
                                                         <input type="number" class="form-control form-control-user"name="phoneno"
-                                                               placeholder="Phone Number"  >
+                                                               placeholder="${customer.phoneNo}"  >
                                                     </div>
 
                                                     <div class="form-group">
                                                         <input type="text" class="form-control form-control-user"name="address"
-                                                               placeholder="Address" >
+                                                               placeholder="${customer.address}" >
                                                     </div>
                                                     <div class="form-group" >
                                                         <input type="text" class="form-control form-control-user"name="email"
-                                                               placeholder="Email" >
+                                                               placeholder="${customer.email}" >
                                                     </div>
                                                     <div class="form-group" >
-
-                                                                                    <label> (Select your Packageamount)</label>
-                                                        <select class="form-control "form-control-user  name="packageamount" >
+                                                    <label> (Select your Packageamount)</label>
+                                                        <select class="form-control "form-control-user  name="packageamount" selected="${customer.packageAmount}">
                                                             <option>200</option>
                                                             <option>400</option>
                                                             <option>600</option>
@@ -69,9 +71,8 @@
                                                     </div>
 
                                                     <div class="form-group" border-radius: 25px;>
-
-                                                                                    <label> (Select your Area)</label>
-                                                        <select class="form-control "form-control-user  name="area">
+                                                    <label> (Select your Area)</label>
+                                                        <select class="form-control "form-control-user  name="area" selected="${customer.area}">
                                                             <option>Gandhibag</option>
                                                             <option>Mahal</option>
                                                             <option>Sadar</option>
@@ -80,27 +81,25 @@
 
                                                     <div class="form-group">
                                                         <input type="text" class="form-control form-control-user" name="balance"
-                                                               placeholder="Balance" >
+                                                               placeholder="${customer.balance}" >
                                                     </div>
 
                                                      <div class="form-group" >
                                                         <input type="text"  class="form-control form-control-user" name="setupboxno"
-
-                                                               placeholder="Set-top Boxno." >
+                                                               placeholder="${customer.setupBoxNo}" >
                                                     </div>
 
                                                     <div class="form-group" border-radius: 25px;>
-
-                                                                                    <label> (Status)</label>
-                                                        <select class="form-control "form-control-user  name="status">
+                                                    <label> (Status)</label>
+                                                        <select class="form-control "form-control-user  name="status" selected="${customer.status}">
                                                             <option>Active</option>
                                                             <option>Inactive</option>
-
                                                         </select>
                                                     </div>
 
                                                     <input type="submit" value="Edit Customer" class="btn btn-primary btn-user btn-block">
                                                     <input type="submit" value="Delete Customer" class="btn btn-primary btn-user btn-block">
+                                                </c:forEach>
                                                 </form>
                                             </div>
                                         </div>

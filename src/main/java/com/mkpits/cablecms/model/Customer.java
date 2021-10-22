@@ -12,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Entity
 @Table(name = "customer")
-public class Customer implements Serializable {
+public class Customer {
     @Id
     @Column(name = "customerid")
     @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "false")
